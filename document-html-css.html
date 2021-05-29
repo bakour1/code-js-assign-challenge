@@ -1,0 +1,473 @@
+<!-- div {
+background-color: red; /* color name*/
+background-color: rgb(255 0 0 /50%); /* red green blue / transoaran*/
+background-color: #00ff00; /* color name*/
+background-image: url("../imgs/images.jfif");
+background-repeat: no-repeat; /* repeat-y | repeat-x | no-repeat| repeat تكرار الصورة*/
+background-attachment: local; /* scroll | fixed | local*/
+background-position: 70% 80%; /* lift | centr | right | bottom | x */
+background-size: cover; /* cover امتداد | contain الصورة تتمدد ةتتقلص دون ان تنقص */
+|||||||||||||||||
+
+  /* Top Right Bottom Left */
+  /* 10px 10px 10px 10px */
+  /* padding: 10px; */
+......
+  /* Top Right Bottom Left */
+  /* 10px 20px 10px 20px */
+  /* padding: 10px 20px; */
+......
+  /* Top Right Bottom Left */
+  /* 10px 20px 15px 20px */
+  /* padding: 10px 20px 15px; */
+    padding bottom 
+||||||||||||
+ctrl +h edit text
+||||||||||||||||||||
+    Block
+
+    - Take Full Width If No Width
+    - Add Line Break
+    - Respect Padding, Margin, Width, Height
+
+    Inline
+
+    - Do Not Repsepct Width, Height
+    - Respect Padding And Margin [ Just Wight + Left ]
+    - Do Not Add Line Break
+    - Allow Elements Before And After It in The Same Line
+
+    Inline-Block
+
+    - Allow Elements Before And After It in The Same Line
+    - Respect Padding, Margin, Width, Height
+    display: none; اخفاء العنصر ومكانه
+    visibility: hidden; اخفاء العنصر وبقاء مكانه
+
+    |||||||||||||||||||||
+    .assign-1 {
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+    outline-style: dashed;
+    outline-color: red;
+    outline-width: 3px;
+}
+
+#aa {
+    color: white;
+    background-color: blueviolet;
+    background-color: #8a2be2;
+    background-color: hsl(271, 76%, 53%);
+    background-color: rgb(138, 43, 226);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+#bb {
+    color: white;
+    background-color: rgb(137 43 226 /50%);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+
+}
+#cc {
+    color: white;
+    background-color: rgb(137 43 226 /10%);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+||||||||||||||
+.one,
+.two,
+.three,
+.four,
+p {
+    padding: 10px;
+    margin: 10px 0px;
+    background-color: #eee;
+
+}
+min-width
+max-width
+width : fit-content
+}
+text-shadow: horizon_shado ,, virtichal , ضباب , color
+text-align: rigth lift center
+vertical-align: top| middle | bottom
+direction: ltr | rtl
+text-dicoration: line-through | under-line | over-line
+                none; لازالة الخط من اللينك
+text-transform: upper | lower | capitlaize
+letter-spacing: ..px;
+text-indent: ..px;    تحريك النص
+line-hight: 1.6; => 160%  move text vertical
+    line-height: 60px;
+word-spacing: ..px;
+white-space normal | nowrap           of | on ايقاف النص ةالنزول لسطر ثاني
+word break: word-break | all
+text-overflow: ellipsis قطع...  || ;   
+div:hover {
+    overflow: visible; عرض عند اقتراب الماوس   ||
+}
+font-size
+inheret وراثة
+em => time
+rem => root time
+vw => view port width مساحة صفحة الويب
+font-style  i ||| normal
+font-variant: small-caps; |||uppercase
+font-weigt: 100|200....  ||||bold
+cursor: pointer; ||crap ||
+    width: 25%;
+    float: left;
+    }
+    .clear {
+    clear: both;
+    }
+    position: relative  من نفسه
+    apsolte الصفحة او الاب
+    relatev for father 
+    absolot fo div ===> يتحرك داخل الاب
+    fixed => scroll with pa ge
+    stiky
+        top: 0;
+    <a>
+        a::hover {
+            color red ==> عند اقتراب الماوس يتحول اللون الى الاحمر
+        a::visited {
+            color blue ==> when visit link . well chang color to blue
+    check box == >>  ch:checked + label {
+                    color: red;   ===> when checked color recolor red
+                    display: none;  ===> hiddin small box ckeck
+div:empty{
+    border => for select the class empty
+    div:foucs{
+        border... =>> when foucs in input our .. well change border, color ..
+    div::first-letter{}==> select first letter
+    div::first-line{}==> select first line
+    ::selection{
+    background-color, color ===> تلةين مكان التحديد بدل الازرق
+    div::after{
+    content}} =>>>>> بعد الديف مثل اضافة المنت جديد
+    div::before{
+    content}} =>>>>> قبل الديف مثل اضافة المنت جديد
+border-top:
+border-width
+border-style
+border-color ,,,<<transparent>> شفاف
+body {
+    counter-reset: box;
+}
+
+div::after {
+    counter-increment: box;
+    content: counter(box);
+}
+    box-shadow:
+    0 0 10px 0 #F10000,
+    0 0 10px 0 #000,
+    0 0 10px 0 #080,
+    0 0 10px 0 #00f,
+    0 0 10px 0 yellow;
+        border-bottom-right-radius: 10px 20px;
+    border-top-left-radius: 10px 20px;
+transition-duration: 1s ||| 1000ms; مدة الانتقال
+transition-delay: 1s; مدة الانتطار قبل الانتقال
+transition-property: all; تحديد الخةاص للمشاركة في تةقيتات ترانسيشن
+transition-timing-function: ease in | ease out |: ease; sloly => speed => sloly  ||||||||||| liner all the time like mpdel
+transition: all 0.5s  2s linear; property | duration timing-function | dely
+transition: width 1s, height 3s;
+:root {
+    --mainColor: blue;
+    --mainPadding: 10px;
+                    .main:hover {
+                position: relative;
+                top: 0px;
+                }
+                .main:hover .child {
+                    position: relative;
+                    top: 20px;
+                }
+* {
+    box-sizing: border-box;
+}
+Flexible Box
+For Parent
+- display: flex => To Start Flexible Box
+- flex-direction: row => Default Value
+- flex-wrap: nowrap => Default Value
+- flex-flow: [Flex-Direction] + [Flex-Wrap]
+- justify-content: flex-start => Default Value
+- align-items: stretch => Default Value
+- align-content: stretch => Default Value
+For Child
+- flex-grow: 0 => Default Value
+- flex-shrink: 1 => Default Value
+- order: 0 => Default Value
+- flex-basis: auto => Default Value
+- flex: [Flex Grow] [Flex Shrink] [Flex Basis] 0 1 Auto
+display: flex; => for start flex
+    flex-direction: row; => director:rtl => the row dirction
+    flex-direction: row-reverse;
+    flex-direction: column; vertical
+    flex-direction: column-reverce; vertical
+    flex-wrap: wrap; || nowrap 
+                wrap-reverce
+    flex-flow : [flex-direction flex wrap]    flex-flow: row wrap;
+    justify-content: flex-start, center , end; عند  لسطر جديد تحكم في الدايركشن
+                    : space-bitwain سيتم تقسيم المساحة المتبقية الى فراغات متناسقة بين العناصر
+                    : space-around مسافات حول العنصر
+                    :space-evenly دمج الخاصيتين
+    display: flex;
+    justify-content    |||text-align: center; ||heigh-aline
+    align-items:  flex-start |center |flex-end ||stretch  |||| height-align: ...px التعامل مع element 
+    align-self: flex-center ....end ...start
+    align-content:  التعامل مع المحتوى كاملا
+    flex-grow : 0 =>  نمو العناصر
+    flex-shrink : 0; تقلص العناصر
+    flex-basis:  <==> width but it is outmatecly with heigh too
+    - flex: [Flex Grow]d [Flex Shrink]d [Flex Basis px] 0 1 {Auto}px
+display : enline-block
+caret-color: red;من اجل تلوين المؤشر 
+background-image: linear-gradient(to right, red 50%, #27ae60 50%);
+input{
+        border: none;
+        background-color: transparent;
+        outline: none;
+}
+display: grid | inline-grid
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+/*
+    Grid
+    Parent
+    - display: grid | inline-grid
+    - grid-template-columns: [Number Of Columns In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - grid-template-rows: [Number Of Rows In] => [Px, %, Auto, Fraction, Repeat, Mix]
+    - gap: [Row Gap] [Column Gap]
+*/  display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    /* row-gap: 10px;
+    column-gap: 10px; */
+    gap: 10px 10px;
+    * {
+    <div class="page">
+    <h2>Elzero</h2>
+    <nav>
+    <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Services</li>
+        <li>Contact</li>
+    </ul>
+    </nav>
+    <section>Content</section>
+    <aside>Sidebar</aside>
+    <footer>Footer</footer>
+    </div>
+box-sizing: border-box;
+padding: 0;
+margin: 0;
+}
+ul {
+list-style: none;
+}
+ul li {
+display: inline-block;
+}
+
+.page {
+height: 100vh;
+background-color: #eee;
+display: grid;
+grid-template-columns: repeat(10, 1fr);
+grid-template-rows: 50px auto 50px;
+grid-template-areas:
+"logo logo nav nav nav nav nav nav nav nav"
+"cont cont cont cont cont cont cont . side side"
+"foot foot foot foot foot foot foot foot foot foot";
+}
+h2 {
+grid-area: logo;
+background-color: red;
+color: white;
+}
+nav {
+grid-area: nav;
+background-color: blue;
+color: white;
+}
+section {
+grid-area: cont;
+background-color: yellow;
+color: white;
+}
+aside {
+grid-area: side;
+background-color: green;
+color: white;
+}
+footer {
+grid-area: foot;
+background-color: black;
+color: white;
+}
+grid-column : 1/8 
+        drid-colmn-start: 1
+        drid-colmn-end: 8
+grid-colmn : 2/ span 3;
+.grid {
+    counter-reset: count;
+}
+.grid div::after {
+    counter-increment: count;
+    content: "Element "counter(count);
+}
+transform: scale(2, 2) شد وتمديد x|y
+transform: rotate(360deg)
+transform: rotate(6.28rad)
+transform: rotate(400grad)
+transform: rotate(1turn)
+transform: scale(1, 2) rotate(20deg);
+opacity: شفافية
+transform: translate(x, y)
+transform: ( translateX(), translateY()scaleX(), skewY(), skewX(), scaleY())
+transform: matrix(scaleX(), skewY(), skewX(), scaleY(), translateX(), translateY())
+.class {
+matrix(3, 0.2679, 0, 3, 20, 100);
+/* scaleX, skewY, skewX, scaleY, translateX, translateY   */
+}
+transform-origin
+Syntax
+Default Values => 50% 50% 0
+2D Transform => transform-origin(X, Y)
+3D Transform => transform-origin(X, Y, Z)
+perspective : ...px لتحديد مسافة 3d 
+X-Axis
+- CSS Unit [px, em, rem]
+- %
+- Keyword
+-- Left = 0%
+-- Center = 50%
+-- Right = 100%
+Y-Axis
+- CSS Unit [px, em, rem]
+- %
+- Keyword
+-- Top = 0%
+-- Center = 50%
+-- Bottom = 100%
+
+div {
+div::before
+div::after{
+div:hover::before {
+    transform: rotate(1turn);
+div:hover::after {
+    transform: rotate(1turn);
+        transform: translate(-50%, -50%) rotate(45deg);
+animation-name: change-color;
+animation-duration: 2s;
+}
+/* Code One */
+@keyframes change-color {
+from {
+background-color: red;
+}
+to {
+background-color: blue;
+}
+}
+/* Code Two */
+@keyframes change-color {
+0% {
+background-color: red;
+}
+100% {
+background-color: blue;
+}
+}
+/* Code Three */
+@keyframes change-color {
+0% {
+background-color: red;
+}
+5% {
+background-color: blue;
+}
+80% {
+background-color: black;
+}
+100% {
+background-color: red;
+animation-name: ""
+animation-duration: s
+animation -iteration-count: 1 || infinty
+animation-timing-function: ease| liner ,,,
+animathion-diriction : reverce
+anemation-delat: 2s| -2
+animation-fill-mode: both
+                    forword => last key-frame
+                    backword=> first key frame
+animation-play-state : runing | paused
+CSS Selectors
+- *
+- Element => [p, div, h2]
+- Element OtherElement => div p
+- .class-name
+- #id-name
+- .parent .child
+- .class-one.class-two
+- .class-name div, .class-name p
+    div[class= ""]
+- Element.class-name => p.class-name
+- .parent > .child => Direct Child
+- Element + Other Element => [div + p] ديف ةمن بعده برغراف
+- Element ~ Other Elements => [p ~ div] برغراف جميع الديفات بعده 
+- [Attribute]
+- Element[Attribute] title ="..." => all the title
+- [Attribute=Value] title ="..." => all the title="..."
+- Element[Attribute=Value] => input[type="submit"]
+- [Attribute~=Value] => Contains A Word
+- [Attribute*=Value] => Contains A Atring
+- [Attribute^=Value] => Start With A String
+- :first-child => div:first-child
+- :last-child
+- :first-of-type
+- :last-of-type
+- :only-child
+- :not(Selectors)
+- :nth-child(n) ==> div:nth-child(2) {
+- :nth-last-child(n)
+- :nth-of-type(n) div:nth-of-type(2)
+- :nth-last-of-type(n)  
+- :root
+- :checked
+- :empty
+- :disabled
+- :required
+- :focus
+- ::selection
+- ::placeholder
+                } -->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title> wep CSS</title>
+        <link rel="stylesheet" href="css/master.css">
+    </head>
+    <body>
+        <div class="one">One</div>
+    </body>
+</html>
