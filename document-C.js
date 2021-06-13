@@ -14,6 +14,18 @@ window.onload = function () {
 {
 window.alert("hello from js file");
 }
+//======> confirm ---------------continue  or stop
+{
+    confirm("vhjxjv")
+}
+// example
+{
+    alert( "my name is sami" );
+    myname = prompt( "Enter your name", "my name is ..." );
+    alert(myname)
+    mix = confirm( "are you sure ?" );
+    alert( mix ); // if i chose yes will be alert true , or false
+}
 //======> document.write---------- write p or h1 or span 
 {
 document.write("<h1>hello <span>Page</span></h1>")
@@ -81,22 +93,22 @@ function Person(firstName, lastName) {
 
 //======> console.group---------- create list group
 {
-    console.group("A");
+console.group("A");
     console.log("message one");
     console.log("message two");
     console.group("1");
+        console.log("message one");
+        console.log("message two");
+        console.group("2");
             console.log("message one");
             console.log("message two");
-            console.group("2");
-                console.log("message one");
-                console.log("message two");
-    console.groupEnd("A");
-    console.groupEnd("1");
-    console.groupEnd("2");
+console.groupEnd("A");
+console.groupEnd("1");
+console.groupEnd("2");
 
 console.group("B");
-console.log("message one");
-console.log("message two");
+    console.log("message one");
+    console.log("message two");
 }
 //======> console.assert ----------- alert simple
 {
@@ -135,7 +147,7 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     console.log(typeof 9999) //number
     console.log(typeof [10, 15, 17]) // Array ==> object
     console.log(typeof ["os", "sa", "ah"]) // Array ==> object
-    console.log(typeof {name: 'osama', age: 17, country: "SYR"}) // Array ==> object
+    console.log(typeof {name: 'osama', age: 27, country: "SYR"}) // Array ==> object
     console.log(typeof true) //boolean
     console.log(typeof false) //boolean
     console.log(typeof undefined) //undefined
@@ -169,24 +181,26 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     - Block Or Scope Function
 }
 //======> String Syntax + Character Escape Sequences
-let a = 10;
-let b = 20;
-let c = b / a;
-let d = b / a / c
-
-console.log(`_${c}${d}_${b}${c}${d}_${b}${c}${d}_${b}${c}${d}_${b}`); // _21_2021_2021_2021_20_
-console.log(
-    '`I\'m In\n\\\\\nLove \\\\ """ \'\'\'\n++With ++\n\\"""\\"""\n""JavaScript""``'
-); 
 {
-    console.log('Elzero Web "School"');
-console.log("Elzero Web 'School'");
-console.log("Elzero Web \"School\"");
-console.log('Elzero \\ Web \'School\'');
-console.log("Elzero \
-Web \
-School");
-console.log("Elzero\nWeb\nSchool");
+    let a = 10;
+    b = 20,
+    c = b / a,
+    d = b / a / c;
+
+    console.log(`_${c}${d}_${b}${c}${d}_${b}${c}${d}_${b}${c}${d}_${b}`); // _21_2021_2021_2021_20_
+    console.log(
+        '`I\'m In\n\\\\\nLove \\\\ """ \'\'\'\n++With ++\n\\"""\\"""\n""JavaScript""``'
+    ); 
+    {
+        console.log('Elzero Web "School"');
+    console.log("Elzero Web 'School'");
+    console.log("Elzero Web \"School\"");
+    console.log('Elzero \\ Web \'School\'');
+    console.log("Elzero \
+    Web \
+    School");
+    console.log("Elzero\nWeb\nSchool");
+    }
 }
 //Concatenation
 {
@@ -210,33 +224,36 @@ console.log("Elzero\nWeb\nSchool");
 
     // Second Example
     
-    let title = "Elzero";
-    let desc = "Elzero Web School";
-    
-    let markup = `
-    <div class="card">
-    <div class="child">
-    <h2>${title}</h2>
-    <p>${desc}</p>
-    </div>
-    </div>
+    let title = "Elzero",
+        desc = "Elzero Web School";
+
+    let print = `
+        <div class="card">
+            <div class="child">
+                <h2>${title}</h2>
+                <p>${desc}</p>
+            </div>
+        </div>
     `;
-    document.write(markup);
+    document.write( print );
+    console.log( print );
 
     // therd Example
     let theCard = theTitle = "Elzero",
-    theDescription = "Elzero Web School",
-    theDate = "25/10"
+                theDescription = "Elzero Web School",
+                theDate = "25/10";
+
     Card = `
-    <div class="card">
-        <div class="child">
-        <h3>Hello ${theTitle}</h3>
-        <p>${theDescription}</p>
-        <span>${theDate}</span>
+        <div class = "card">
+            <div class ="child">
+                <h3>Hello ${ theTitle }</h3>
+                <p>${ theDescription }</p>
+                <span>${ theDate }</span>
+            </div>
         </div>
-    </div>
     `;
-    document.write( Card.repeat( 4 ) );
+    document.write( Card.repeat( 4 ));
+    
     //fourd
     var numberOne = 10, 
     numberTwo = 20
@@ -256,4 +273,113 @@ console.log("Elzero\nWeb\nSchool");
     20
     10
     */
+}
+//arithmetic operators
+{
+    console.log( 10 + 20 ); //30
+    console.log( 10 + "osama" ); //osama
+
+    console.log( 10 - 20); // -10
+    console.log( 10 - "osama" ); // nan
+    console.log( typeof ( NaN ) ) // number
+    
+    console.log( 10 * 20 ); // 200
+    console.log( 10 * -20 ); // -200
+
+    console.log( 20 /5 );  // 4
+    console.log( 20 / 3 ); // 6.666666666666667
+
+    console.log( 2 ** 4 ); //16
+    console.log( 2 * 2 * 2 * 2 ); // 16
+
+    console.log( 10 % 2 ); // 0
+    console.log( 11 % 2 ); // 1
+
+    num = 1
+    1
+    ++num
+    2
+    console.log( +100 );  // 100
+    console.log( +"100" );  // 100
+    console.log( +"-100" );  // -100
+    console.log( +"osama" );  // nan
+    console.log( +"15.5" );  // 15.5
+    console.log( +0xff );  // 255
+    console.log( +null );  // 0
+    console.log( +false );  // 0
+    console.log( +true );  // 1
+
+    console.log( -100 );  // -100
+    console.log( -"100" );  // -100
+    console.log( -"-100" );  // 100
+    console.log( -"osama" );  // nan
+    console.log( -"15.5" );  // -15.5
+    console.log( -0xff );  // -255
+    console.log( -null );  // -0
+    console.log( -false );  // -0
+    console.log( -true );  // -1
+
+    console.log( Number( "100" ) );
+
+    console.log(200 + 15 % 3 + 190 + 10 - 400); // 0
+}
+// type coerction (type casting) تحويل بالاكراه
+{
+    let a = "10";
+    let b = 20;
+    let c = true;
+    console.log( a + b ); // 1020
+    console.log( +a + b ); // 30
+
+    console.log( a - b ); // -10
+    console.log( b - a ); // 10
+
+    console.log( "" + 2 ); // 2
+    console.log( "" - 2 ); // -2
+
+    console.log( false + true ); // 1
+    console.log( false - true ); // -1
+
+    console.log( b + c ); //21
+    console.log( a + b + c ); //1020true
+    console.log( +a + b + c ); // 31
+}
+// ASsignment Operators
+{
+    let a = 10;
+    a = a + 20;
+    console.log( a ); //30
+    // a = 30;
+
+    a += 100; // a = a + 100
+    console.log( a ); //130
+    ////////////////////////
+    let a = 10;
+    a -= 100; // a = a - 100
+    console.log( a ); //-90
+}
+//assignment 
+{
+    let a = 10;
+    let b = "20";
+    let c = 80;
+
+    console.log( ++a + +b++ + +c++ - +a++ ); //100
+    console.log( 11 + 20 + 80 - 11 ); //100
+
+    console.log( ++a + -b + +c++ - -a++ + +a ); //94
+    console.log( 11 + -20 + 80 + 11 + +12 ); //94
+
+    console.log(--c + +b + --a * +b++ - +b * a + --a - +true) //97
+    console.log( 79 + 20 + 9 * 20 - 21 * 9 + 8 - 1 ) //97
+
+    let d = "-100";
+    let e = "20";
+    let f = 30;
+    let g = true;
+
+    console.log( -d * +e + f % 3 * g ); //2000
+    console.log( -d * +e + f % ++g ); //2000
+    console.log( -( --d ) + +f + ++e * ++g ); //173
+    console.log(-(--d) * ++g - --f);  //173
 }
