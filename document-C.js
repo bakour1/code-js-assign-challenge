@@ -383,3 +383,111 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     console.log( -( --d ) + +f + ++e * ++g ); //173
     console.log(-(--d) * ++g - --f);  //173
 }
+// number 
+{
+    console.log( 1000000 ); //1000000
+    console.log( 1_000_000 ); //1000000
+    console.log( 1e6 ); //1000000
+    console.log( 10 ** 6 ); //1000000
+    console.log( 1000000.00 ); //1000000
+
+    console.log( Number.MAX_SAFE_INTEGER );
+    console.log( Number.MIN_SAFE_INTEGER );
+    console.log( Number.MAX_SAFE_INTEGER );
+    console.log( Number.MAX_VALUE );
+}
+// number methods
+{
+    console.log( ( 100 ).toString() ); //100 ""
+    console.log( 100..toString() ); //100 ""
+    console.log( 100.1.toString() ); //100.1 ""
+
+    console.log( 100.55555.toFixed(2) ); //100.56 ""
+    console.log( 100.55455.toFixed( 2 ) ); //100.55 ""
+
+    console.log( Number( "100 osama" ) ); //nan $
+    console.log( Number( +"100 osama" ) ); //nan $
+    console.log( Number( parseInt("osama 100 osama") ) ); //nan $
+    console.log( Number( parseInt("100 osama") ) ); // 100  $
+    console.log( Number( parseInt("100.500 osama") ) ); // 100  $
+
+    console.log( Number( parseFloat("100.500 osama") ) ); //100.5   $
+
+    // is.method()  ==> true or false
+
+    console.log( Number.isInteger( "100" ) ); // false
+    console.log( Number.isInteger( 100 ) ); // true
+    console.log( Number.isInteger( 100.500 ) ); // false
+
+    console.log( Number.isNaN( 100 ) ); // false
+    console.log( Number.isNaN( "100" ) ); // false
+    console.log( Number.isNaN( "osama" / 3 ) ); // true
+}
+// math object
+{
+    console.log( Math.round( 99.2 ) ); // 99
+    console.log( Math.round( 99.5 ) ); //  100
+
+    console.log( Math.ceil( 99.2 ) ); //  100
+    console.log( Math.floor( 99.7 ) ); //  99
+
+    console.log( Math.min( 10, 20 ,100, -100, 90) ); //  -100
+    console.log( Math.max( 10, 20 ,100, -100, 90) ); //  100
+
+    console.log( ( 2** 4 ) ); // 16
+    console.log( Math.pow( 2, 4 ) ); // 16
+
+    console.log( Math.random() );  //random 0.1828806668286198
+
+    console.log( Math.trunc(99.5) );  // 99 ==> delete the float
+
+}
+// assign number
+{
+    console.log(100_000);                               // 100000
+    console.log(100000);                                // 100000
+    console.log(5e4 + 5e4);                             // 100000
+    console.log(10 ** 5);                               // 100000
+    console.log(Math.pow(10, 5));                       // 100000
+    console.log(100000.00);                             // 100000
+    console.log(100000..toString());                    // 100000
+    console.log((100000).toString());                   // 100000
+    console.log(Number( parseInt("100000 sami") ));     // 100000
+    console.log(Number( parseInt("100000.9 sami") ));   // 100000
+    console.log( Math.round( 99999.5 ));                // 100000
+    console.log(Math.ceil( 99999.2 ));                  // 100000
+    console.log( Math.floor( 100000.7 ) );              // 100000
+    console.log( Math.trunc(100000.5) );                // 100000
+    console.log(Math.min(100000));                      // 100000
+    console.log( Math.max( 100000 ) );                  // 100000
+
+    // assign 2 --------------------------
+    console.log( -Number.MIN_SAFE_INTEGER );            // 9007199254740991
+
+    // assign 3---------------------------
+    console.log( Number.MAX_SAFE_INTEGER / Number.MAX_SAFE_INTEGER + 15 ); // 16  // 16
+    console.log( Number.MAX_SAFE_INTEGER %2  + 15 );    // 16
+    console.log( Number.MAX_SAFE_INTEGER % 1 + 16 );    // 16
+
+    // assign 4---------------------------
+    let views = 100.56789;
+
+    console.log( Math.trunc(views) );                   // 100
+    console.log( views.toFixed(2) );                    // 100.57
+
+    // assign 5---------------------------
+    let num = 10;
+    console.log(+Number.isInteger( num ) + +true);      // 2
+
+    // assign 6---------------------------
+    let flt = 10.4;
+
+    console.log(Math.trunc(flt));                       // 10
+    console.log(Math.floor( flt ));                     // 10
+    console.log(Math.round(flt));                       // 10
+    console.log(parseInt(flt + "sami"));                // 10
+    console.log(Math.ceil( --flt ));                    // 10
+
+    // assign 7---------------------------
+    console.log(Math.floor((Math.random() * 5) + 0) ); // 0 || 1 || 2 || 3 || 4
+}
