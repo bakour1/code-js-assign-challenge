@@ -1,46 +1,23 @@
-const api = "https://www.breakingbadapi.com/api/characters"
+let a = 1_00;
+let b = 2_00.55;
+let c = 1e2;
+let d = 2.4;
 
-async function getData(){
-    try{ //for when have problem in server gave me message in console
-        const respone = await fetch(api)
-        const data = await respone.json();
-        const print = data.map( m => m.name ) //m => parametar // all param gave me name this parametar
-        printData(data)
-    }
-    catch(e){ //e = error ,catch = التقط
-        console.log("ERROR:" ,e.message)
-    }
-}
+//find smallest number in all variable
+console.log( Math.trunc( Math.min(a, b, c, d)) );  // 2
 
-function printData(data){
-    const header = document.querySelector("#header")
-    const content = document.querySelector("#content")
+// use variable a + b one time to get the needed output
+console.log( d%d + Math.pow(a, 2) );            // 10000
+console.log(Math.pow(a, 2) * Math.pow(d, 0))    // 10000
+console.log( Math.pow( a, Math.trunc( d ) ) );  // 10000
 
-    header.innerHTML += `
-        <select onchange="getCharac(this.value)"> 
-            <option>Please Select actor</option>
-            ${
-                data.map(Character => `<option>${Character.name}</option>`)//Character => parametar // all param gave me name this parametar away option
-            }
-        </select>
-        ` //+=    => add not remove and change
-        // onchange="getCharac(this.value) ==>> add to html onchange,
-        // getCharac ==>> function
-        // this.value ==>> i need the value selected in list for it will be name input
+//get  integer "2" from d variable with methods
+console.log( Math.trunc( d ) );       // 2
+console.log( Math.floor( d ) );       // 2
+console.log( Math.round( d ) );       // 2
+console.log( Math.ceil( d ) - +true ); // 2
 
-}
-async function getCharac(name){         // name = (this.value) 
-    if(name !== 'Please Select actor' ){ // for not show error in console when select the please
-    //console.log(name) //when i select a value in web will be  printed in consol
-    const respone = await fetch(`${api}?name=${name}`) // about fetch => will need documantion how serch character by name because we have the name only in list
-    const data = await respone.json()               // /api/characters?name=Walter ==>>/api/characters =<${api},, walter=${x}
-    console.log(data) // data will be in consol looks like one masfofa only
-    //console.log(data[0].nickname)  //[0] because the normal one masfofa and for "nickname"we get it from console
-    content.innerHTML = `
-    <h2>${data[0].name} (${data[0].nickname})</h2>
-    <h4>${data[0].portrayed}</h4>
-    <img src="${data[0].img}" width= '250px'">
-    `
-    }
-}
-    getData()
+// use variables b + d to get this values 
+
+console.log( ( Math.floor( b ) / Math.ceil( d ) ).toFixed( 2 ) );        // 66.67 => string
+console.log( Math.round( ( Math.floor( b ) / Math.ceil( d ) ) ) );       // 67    => number
