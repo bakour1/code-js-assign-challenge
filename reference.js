@@ -18,7 +18,7 @@ window.alert("hello from js file");
 {
     confirm("vhjxjv")
 }
-// example
+//======> example
 {
     alert( "my name is sami" );
     myname = prompt( "Enter your name", "my name is ..." );
@@ -202,7 +202,7 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     console.log("Elzero\nWeb\nSchool");
     }
 }
-//Concatenation
+//======> Concatenation
 {
     let a = "We Love";
     let b = "JavaScript";
@@ -274,7 +274,7 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     10
     */
 }
-//arithmetic operators
+//======> arithmetic operators
 {
     console.log( 10 + 20 ); //30
     console.log( 10 + "osama" ); //osama
@@ -323,7 +323,7 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
 
     console.log(200 + 15 % 3 + 190 + 10 - 400); // 0
 }
-// type coerction (type casting) تحويل بالاكراه
+//======>  type coerction (type casting) تحويل بالاكراه
 {
     let a = "10";
     let b = 20;
@@ -344,7 +344,7 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     console.log( a + b + c ); //1020true
     console.log( +a + b + c ); // 31
 }
-// ASsignment Operators
+//======>  ASsignment Operators
 {
     let a = 10;
     a = a + 20;
@@ -358,7 +358,7 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     a -= 100; // a = a - 100
     console.log( a ); //-90
 }
-//assignment 
+//======> assignment 
 {
     let a = 10;
     let b = "20";
@@ -383,11 +383,15 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     console.log( -( --d ) + +f + ++e * ++g ); //173
     console.log(-(--d) * ++g - --f);  //173
 }
-// number 
+//======>  number 
 {
     console.log( 1000000 ); //1000000
-    console.log( 1_000_000 ); //1000000
-    console.log( 1e6 ); //1000000
+    console.log(1_000_000); //1000000
+    
+    console.log(1e6); //1000000
+    console.log(123e5); //// 12300000
+    console.log(123e-5); // 0.00123
+
     console.log( 10 ** 6 ); //1000000
     console.log( 1000000.00 ); //1000000
 
@@ -396,7 +400,7 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     console.log( Number.MAX_SAFE_INTEGER );
     console.log( Number.MAX_VALUE );
 }
-// number methods
+//======>  number methods
 {
     console.log( ( 100 ).toString() ); //100 ""
     console.log( 100..toString() ); //100 ""
@@ -423,7 +427,7 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     console.log( Number.isNaN( "100" ) ); // false
     console.log( Number.isNaN( "osama" / 3 ) ); // true
 }
-// math object
+//======>  math object
 {
     console.log( Math.round( 99.2 ) ); // 99
     console.log( Math.round( 99.5 ) ); //  100
@@ -442,7 +446,7 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     console.log( Math.trunc(99.5) );  // 99 ==> delete the float
 
 }
-// assign number
+//======>  assign number 25
 {
     console.log(100_000);                               // 100000
     console.log(100000);                                // 100000
@@ -491,7 +495,7 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     // assign 7---------------------------
     console.log(Math.floor((Math.random() * 5) + 0) ); // 0 || 1 || 2 || 3 || 4
 }
-// Challenge
+//======>  Challenge
 {
     let a = 1_00;
     let b = 2_00.55;
@@ -517,3 +521,147 @@ console.assert(2 != 3 ,'the # is not even'); // not error no msg no thing
     console.log( ( Math.floor( b ) / Math.ceil( d ) ).toFixed( 2 ) );        // 66.67 => string
     console.log( Math.round( ( Math.floor( b ) / Math.ceil( d ) ) ) );       // 67    => number
 }
+//======> string methods(1)
+{
+    var theName = "Sami"
+
+console.log(theName);       // Sami
+console.log(theName[1]);    // a position [1]
+console.log(theName[5]);    // undefined when no  index print undefined
+
+console.log(theName.charAt(1)); // a
+console.log(theName.charAt(5)); //   =>when no index print space
+console.log(theName.length);    // 4  =>how many char
+
+    var theName="  Sami  "
+
+console.log(theName.length); // 8  =>how many char
+console.log(theName.trim()); // Sami => for cut"delete" the spaces
+
+console.log(theName.toUpperCase()); // ..SAMI..
+console.log(theName.toLowerCase()); // ..sami..
+
+console.log(theName.trim().charAt(2).toUpperCase()); // M
+}
+//======> string methods(2)
+{
+var a="Elzero Web School";
+
+console.log(a.indexOf("Web"));      // 7
+console.log(a.indexOf("Web", 8));   //-1
+
+console.log(a.indexOf("o"));        // 5
+
+console.log(a.lastIndexOf("o"))     // 15
+console.log(a.lastIndexOf("Web"));  // 7
+
+console.log(a.slice(0));       // Elzero Web School
+console.log(a.slice(7));       // Web School
+
+console.log(a.slice(2, 6));    // zero
+console.log(a.slice(7, 10));   // Web
+
+console.log(a.slice(-5));      // chool
+console.log(a.slice(-5, -3));  // ch
+
+console.log(a.repeat(3));      //Elzero Web SchoolElzero Web SchoolElzero Web School
+
+console.log(a.split());        // ["Elzero Web School"]
+console.log(a.split(" "));     //  ["Elzero", "Web", "School"]
+
+var a="Elzero|Web|School";
+
+console.log(a.split("|"));     //  ["Elzero", "Web", "School"]
+console.log(a.split("|", 2));  //  ["Elzero", "Web"] ==> 2 =>limit
+
+}
+//======> string methods(3)
+{
+var a="Elzero Web School";
+
+console.log(a.length); // 17
+
+console.log(a.substring(2));            // zero Web School
+console.log(a.substring(2, 6));         // zero
+console.log(a.substring(6, 2));         // zero fixed order number
+console.log(a.substring(-10, 6));       // Elzero ==> 0 - 6
+console.log(a.substring(17));           // 
+console.log(a.substring(a.length - 1)); // l
+console.log(a.substring(a.length - 5, a.length -3 )); // ch
+
+console.log(a.substr(0));               // Elzero Web School
+console.log(a.substr(0, 6));            // Elzero /6 => length
+console.log(a.substr(-3, 6));           // ool
+console.log(a.substr(-5, 2));           // ch
+
+console.log(a.includes("Web"));         // true
+console.log(a.includes("Web", 8));      // false / 8=> index start
+
+console.log(a.startsWith("E"));         // true
+console.log(a.startsWith("E", 2));      // false
+console.log(a.startsWith("z", 2));      // true
+console.log(a.startsWith("zero", 2));   // true
+
+console.log(a.endsWith("o"));           // false
+console.log(a.endsWith("o", 6));        // true 12345 o
+console.log(a.endsWith("l", 2));        // true 1 o
+console.log(a.endsWith("l", 17));       // true 
+console.log(a.endsWith("l"));           // true 
+
+
+//----------Assignment - 1
+let text = "elzero";
+console.log(text[0]);                                        // e
+console.log(text.charAt(0));                                 // e
+console.log(text.slice(0, 1));                               // e
+console.log(text.substring(0, 1));                           // e
+console.log(text.substring(text.length - 6, text.length-5)); // e
+console.log(text.substr(text.length - 6, text.length-5));    // e
+console.log(text.substr( - 6, 1));                           // e
+console.log(text[0].repeat(3));                              // eee
+
+
+//----------Assignment - 2
+let word = "Elzero";
+let letterZ = "z";
+let letterE = "e";
+let letterO = "O";
+
+console.log(word.includes(letterZ));                        // True
+console.log(word.startsWith(letterE.toUpperCase()));        // True
+console.log(word.endsWith(letterO.toLowerCase()));          // True
+
+//----------Challenge - 2
+
+let a="Elzero Web School";
+
+// Include This Method In Your Solution [slice, charAt]
+console.log(a.length); // 17
+console.log(a.slice(a.length -15, a.length - 11));         // Zero
+console.log(a.slice(2, 6)); // Zero
+
+// 8 H
+console.log(a[13].toUpperCase().repeat(8));                // HHHHHHHH
+
+// Return Array
+console.log(a.split(" ", 1));                              // ["Elzero"]
+
+// Use Only "substr" Method + Template Literals In Your Solution
+console.log(a.substr(0 , 6) + " " + a.substr(11));                // Elzero School
+console.log(a.substr(0, 6)+a.substr(10));                         // Elzero School
+
+// let a="Elzero Web School";
+// Solution Must Be Dynamic Because String May Changes
+console.log(a.charAt(0).toLowerCase()+a.slice(1).toUpperCase()); // eLZERO WEB SCHOOl
+console.log(a[0].toLowerCase()+a.slice(1).toUpperCase());        // eLZERO WEB SCHOOl
+console.log(a[0].toLowerCase()+a.substr(1).toUpperCase());       // eLZERO WEB SCHOOl
+console.log(a[0].toLowerCase()+a.substring(1).toUpperCase());    // eLZERO WEB SCHOOl
+}
+
+
+
+
+
+
+
+
